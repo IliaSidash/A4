@@ -24,8 +24,62 @@ body {
 
 .aside {
   width: 157px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   background: #0169ad;
+}
+
+.phone {
+  position: relative;
+  bottom: 200px;
+  transform: rotate(-90deg);
+
+  display: flex;
+
+  color: #ffffff;
+}
+
+.phone__icon {
+  width: 92.36px;
+  height: 78px;
+  transform: rotate(90deg);
+
+  margin-right: 36px;
+}
+
+.phone__number {
+  margin-right: 47px;
+
+  font-weight: bold;
+  line-height: 84px;
+  font-size: 77px;
+}
+
+.phone__text {
+  line-height: 40px;
+  font-size: 37px;
+}
+
+.phone__text span {
+  display: block;
+  white-space: nowrap;
+}
+
+.site {
+  position: relative;
+  top: 540px;
+  transform: rotate(-90deg);
+
+  font-size: 58px;
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
 }
 
 .head {
@@ -108,6 +162,7 @@ body {
 }
 
 .main {
+  flex: 1 0 auto;
   padding: 213px 120px 0 148px;
 }
 
@@ -149,10 +204,6 @@ td {
   color: #000000;
 }
 
-.table td:first-child {
-  padding-right: 304px;
-}
-
 .count {
   min-width: 195px;
   text-align: center;
@@ -177,6 +228,18 @@ td {
   text-align: left;
   color: #7a7a7a;
 }
+
+.total td {
+  line-height: 147px;
+  font-size: 60px;
+
+  color: #000000;
+}
+
+.table td:first-child {
+  padding-right: 304px;
+}
+
 .total th:last-child,
 .total td:last-child {
   width: 646px;
@@ -195,9 +258,11 @@ td {
 .total td:last-child {
   font-weight: 600;
 }
+
 .total td:last-child span {
   font-weight: normal;
 }
+
 .sign {
   padding: 0 72px !important;
   width: 59px;
@@ -209,13 +274,6 @@ td {
   color: #ffffff !important;
 }
 
-.total td {
-  line-height: 147px;
-  font-size: 60px;
-
-  color: #000000;
-}
-
 .footer {
   display: flex;
   padding-left: 151px;
@@ -223,14 +281,18 @@ td {
 }
 
 .thank {
+  width: 1099px;
+  margin-right: 232px;
+
   font-weight: bold;
-  line-height: normal;
+  line-height: 1;
   font-size: 88px;
 
   color: #191919;
 }
 
 .slogan {
+  width: 721px;
   line-height: 45px;
   font-size: 36px;
 
