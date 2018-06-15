@@ -1,11 +1,14 @@
 html {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  line-height: normal;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  height: 297mm;
-  width: 210mm;
+  height: 3508px;
+  width: 2480px;
 }
 
 *,
@@ -14,33 +17,222 @@ body {
   box-sizing: inherit;
 }
 
-@media print {
-  .page {
-    display: flex;
-  }
+.page {
+  display: flex;
+  height: 100%;
+}
 
-  .aside {
-    width: 157px;
-    height: 3508px;
+.aside {
+  width: 157px;
 
-    background: #0169ad;
-  }
+  background: #0169ad;
+}
 
-  .head {
-    display: flex;
-    padding: 226px 126px 138px 151px;
-    width: 2323px;
+.head {
+  display: flex;
+  padding: 226px 126px 138px 151px;
 
-    background: #e9e9e9;
-  }
+  background: #e9e9e9;
+}
 
-  .logo {
-    display: block;
-    margin-bottom: 179px;
-    margin-right: 528px;
-    img {
-      width: 597px;
-      height: 128px;
-    }
-  }
+.logo {
+  display: block;
+  margin-bottom: 179px;
+  margin-right: 528px;
+}
+.logo img {
+  width: 597px;
+  height: 128px;
+}
+
+.info {
+  font-weight: bold;
+  font-size: 53px;
+}
+
+.info span {
+  display: block;
+}
+
+.companies {
+  display: flex;
+}
+.company {
+  margin-right: 57px;
+}
+
+.company:last-child {
+  margin-right: 0;
+}
+
+.company__title {
+  margin-bottom: 25px;
+
+  font-weight: 600;
+  line-height: 44px;
+  font-size: 25px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7a7a7a;
+}
+
+.company__name {
+  margin-bottom: 29px;
+
+  font-weight: bold;
+  line-height: 62px;
+  font-size: 35px;
+  color: #191919;
+  opacity: 0.8;
+}
+
+.company__text {
+  margin-bottom: 18px;
+
+  font-size: 27px;
+  color: #434343;
+  opacity: 0.8;
+}
+
+.company__mail {
+  display: inline-block;
+  margin-top: 69px;
+
+  font-weight: 600;
+  line-height: 48px;
+  font-size: 27px;
+  color: #434343;
+  text-decoration: underline;
+
+  opacity: 0.8;
+}
+
+.main {
+  padding: 213px 120px 0 148px;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+}
+
+.table th {
+  padding-bottom: 47px;
+
+  text-align: left;
+  font-weight: 600;
+  line-height: 71px;
+  font-size: 40px;
+  color: #000000;
+  white-space: nowrap;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+.name_head {
+  width: 1128px;
+}
+
+.price_head {
+  padding-left: 100px;
+}
+
+.table td {
+  padding-top: 60px;
+
+  line-height: 49px;
+  font-size: 40px;
+  color: #000000;
+}
+
+.table td:first-child {
+  padding-right: 304px;
+}
+
+.count {
+  min-width: 195px;
+  text-align: center;
+}
+.price {
+  text-align: right;
+}
+
+.total {
+  margin-top: 77px;
+  width: 100%;
+  background: #e9e9e9;
+  border-radius: 4px;
+}
+
+.total th {
+  padding: 45px 0 20px;
+  line-height: 48px;
+  font-size: 27px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #7a7a7a;
+}
+.total th:last-child,
+.total td:last-child {
+  width: 646px;
+  padding-right: 50px;
+  background: #0169ad;
+  color: #ffffff;
+  text-align: right;
+}
+
+.total th:first-child,
+.total td:first-child {
+  width: 324px;
+  padding-left: 50px;
+}
+
+.total td:last-child {
+  font-weight: 600;
+}
+.total td:last-child span {
+  font-weight: normal;
+}
+.sign {
+  padding: 0 72px !important;
+  width: 59px;
+
+  font-weight: bold;
+  line-height: 111px !important;
+  font-size: 102px !important;
+
+  color: #ffffff !important;
+}
+
+.total td {
+  line-height: 147px;
+  font-size: 60px;
+
+  color: #000000;
+}
+
+.footer {
+  display: flex;
+  padding-left: 151px;
+  padding-bottom: 147px;
+}
+
+.thank {
+  font-weight: bold;
+  line-height: normal;
+  font-size: 88px;
+
+  color: #191919;
+}
+
+.slogan {
+  line-height: 45px;
+  font-size: 36px;
+
+  color: #000000;
 }
