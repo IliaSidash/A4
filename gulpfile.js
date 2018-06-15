@@ -19,16 +19,15 @@ gulp.task("server", function() {
 });
 
 gulp.task("css", () => {
-  return watch("src/styles/**/*.css", function() {
-    gulp
-      .src("src/styles/main.css")
-      .pipe(plumber())
-      .pipe(sourcemaps.init())
-      .pipe(postcss([require("precss"), autoprefixer()]))
-      .pipe(minifycss())
-      .pipe(sourcemaps.write("."))
-      .pipe(gulp.dest("build/styles/"));
-  });
+  return gulp
+    .src("src/styles/main.css")
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(postcss([require("precss"), autoprefixer()]))
+    .pipe(minifycss())
+    .pipe(sourcemaps.write("."))
+    .pipe(watch("src/styles/**/*.css"))
+    .pipe(gulp.dest("build/styles/"));
 });
 
 gulp.task("html", () => {
