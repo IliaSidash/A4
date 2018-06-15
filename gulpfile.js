@@ -38,4 +38,23 @@ gulp.task("html", () => {
     .pipe(gulp.dest("build/"));
 });
 
-gulp.task("default", gulp.series(gulp.parallel("server", "css", "html")));
+gulp.task("copy:fonts", function() {
+  return gulp
+    .src("./src/fonts/**/*.*")
+    .pipe(watch("src/fonts/**/*.*"))
+    .pipe(gulp.dest("build/fonts"));
+});
+
+gulp.task("copy:images", function() {
+  return gulp
+    .src("./src/images/**/*.*")
+    .pipe(watch("src/images/**/*.*"))
+    .pipe(gulp.dest("build/images"));
+});
+
+gulp.task(
+  "default",
+  gulp.series(
+    gulp.parallel("server", "copy:fonts", "copy:images", "css", "html")
+  )
+);
